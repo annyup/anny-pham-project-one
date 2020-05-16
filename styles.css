@@ -48,11 +48,13 @@ header {
     border: 1px solid red;
     margin: 0 auto;
     width: 80%;
+    position: relative;
 }
 
-.wrapper h1, h2 {
-    position: relative;
-    top: 500px;
+.wrapper h1 {
+    /* position: relative;
+    top: 500px; */
+    padding-top: 500px;
 }
 
 .nav-container {
@@ -392,13 +394,27 @@ footer button {
 }
 
 
-/* Media styles for mobile */
+/* Media styles for tablets */
+
+@media (max-width: 1150px) {
+
+    .wrapper h1 {
+        padding-top: 600px;
+    }
+}
+
+/* Media styles for tablets & mobile */
 
 @media (max-width: 1000px) {
 
     .wrapper {
         width: 90%;
     }
+
+    .wrapper h1 {
+        padding-top: 600px;
+    }
+
 
     h1 {
         font-size: 12vw;
@@ -408,7 +424,8 @@ footer button {
     }
 
     h2 {
-        font-size: 2.7rem;
+        /* font-size: 2.7rem; */
+        font-size: 3vw;
     }
 
     h3 {
@@ -662,18 +679,35 @@ footer button {
         width: 90%;
     }
 
-    /* h1 {
-        font-size: 5.81rem;
-        width: 40%;
-        line-height: 48px;  
-        margin: 0;
-    } */
+    .wrapper h1 {
+        padding-top: 700px;
+    }
 
     h2 {
-        font-size: 1.55rem;
+        /* font-size: 1.55rem; */
     }
 
     h3 {
         font-size: 3.5rem;
+    }
+}
+
+/* Media styles for smaller mobile  */
+
+@media (max-width: 480px) {
+
+    .wrapper h1 {
+        padding-top: 70vh;
+    }
+}
+
+@media (max-width: 320px) {
+
+    h1 {
+        font-size: 4.5rem;
+    }
+
+    h2 {
+        font-size: 1.2rem;
     }
 }

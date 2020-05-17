@@ -1,3 +1,19 @@
+/*   Colour palette
+
+    Scarlet - #BA0621 or rgb(186, 6, 33)
+    Very dark brown - #0B0101 or rgb(11, 1, 1)
+    Lipstick - #CC1D36 or rgb(204, 29, 54)
+    Wine red - #6C0918 or rgb(108, 9, 24) 
+*/
+
+/* Some notes to understand the reason for different measurements, etc:
+    1. Used viewport to help compromise the header text from going over the header image
+    2. Used padding for wrapper for section four & five paragraph for different resolutions and to prevent it from pushing pass the image
+*/
+
+
+/* Setup snippet */
+
 html{line-height:1.15;-ms-text-size-adjust:100%;-webkit-text-size-adjust:100%}body{margin:0}article,aside,footer,header,nav,section{display:block}h1{font-size:2em;margin:.67em 0}figcaption,figure,main{display:block}figure{margin:1em 40px}hr{box-sizing:content-box;height:0;overflow:visible}pre{font-family:monospace,monospace;font-size:1em}a{background-color:transparent;-webkit-text-decoration-skip:objects}abbr[title]{border-bottom:none;text-decoration:underline;text-decoration:underline dotted}b,strong{font-weight:inherit}b,strong{font-weight:bolder}code,kbd,samp{font-family:monospace,monospace;font-size:1em}dfn{font-style:italic}mark{background-color:#ff0;color:#000}small{font-size:80%}sub,sup{font-size:75%;line-height:0;position:relative;vertical-align:baseline}sub{bottom:-.25em}sup{top:-.5em}audio,video{display:inline-block}audio:not([controls]){display:none;height:0}img{border-style:none}svg:not(:root){overflow:hidden}button,input,optgroup,select,textarea{font-family:sans-serif;font-size:100%;line-height:1.15;margin:0}button,input{overflow:visible}button,select{text-transform:none}button,html [type=button],[type=reset],[type=submit]{-webkit-appearance:button}button::-moz-focus-inner,[type=button]::-moz-focus-inner,[type=reset]::-moz-focus-inner,[type=submit]::-moz-focus-inner{border-style:none;padding:0}button:-moz-focusring,[type=button]:-moz-focusring,[type=reset]:-moz-focusring,[type=submit]:-moz-focusring{outline:1px dotted ButtonText}fieldset{padding:.35em .75em .625em}legend{box-sizing:border-box;color:inherit;display:table;max-width:100%;padding:0;white-space:normal}progress{display:inline-block;vertical-align:baseline}textarea{overflow:auto}[type=checkbox],[type=radio]{box-sizing:border-box;padding:0}[type=number]::-webkit-inner-spin-button,[type=number]::-webkit-outer-spin-button{height:auto}[type=search]{-webkit-appearance:textfield;outline-offset:-2px}[type=search]::-webkit-search-cancel-button,[type=search]::-webkit-search-decoration{-webkit-appearance:none}::-webkit-file-upload-button{-webkit-appearance:button;font:inherit}details,menu{display:block}summary{display:list-item}canvas{display:inline-block}template{display:none}[hidden]{display:none}
 
 .clearfix:after {visibility: hidden; display: block; font-size: 0; content: ''; clear: both; height: 0; }
@@ -9,8 +25,8 @@ html { -moz-box-sizing: border-box; -webkit-box-sizing: border-box; box-sizing: 
 .sr-only { position: absolute; width: 1px; height: 1px; margin: -1px; border: 0; padding: 0; white-space: nowrap; clip-path: inset(100%); clip: rect(0 0 0 0); overflow: hidden;}
 
 * {
-    margin:0;
-    padding:0;
+    margin: 0;
+    padding: 0;
     box-sizing: border-box;
 }
 
@@ -25,6 +41,11 @@ body {
     line-height: 29px;
 }
 
+p {
+    font-size: 2.0rem;
+    line-height: 29px;
+}
+
 img {
     width: 100%;
     display: block;
@@ -34,39 +55,15 @@ a {
     text-decoration: none;
 }
 
+a:focus {
+    outline: none;
+}
+
 header {
     background:url(./assets/image-1@2x.png);
     background-size: cover;
     height: 100vh;
     background-position: center;
-}
-
-/* Wrappers and Containers */
-
-.wrapper {
-    max-width: 1920px;
-    border: 1px solid red;
-    margin: 0 auto;
-    width: 80%;
-    position: relative;
-}
-
-.wrapper h1 {
-    /* position: relative;
-    top: 500px; */
-    padding-top: 500px;
-}
-
-.nav-container {
-    padding-top: 30px;
-}
-
-.logo {
-    font-size: 3.0rem;
-    font-family: 'Kanit', sans-serif;
-    color: #FFF;
-    text-transform: uppercase;
-    float: left;
 }
 
 h1, h3, h4, button, .footer-nav {
@@ -98,11 +95,47 @@ h3 {
     line-height: 43px;
 }
 
+/* Wrapper styles */
+
+.wrapper {
+    max-width: 1920px;
+    margin: 0 auto;
+    width: 80%;
+    position: relative;
+
+    /* border: 1px solid red; */
+}
+
+header .wrapper {
+    height: 85vh;
+}
+
+.wrapper h1 {
+    padding-bottom: 30px;
+}
+
+.wrapper h1, .wrapper h2 {
+    position: absolute;
+    bottom: 0;
+}
+
+.logo {
+    font-size: 3.0rem;
+    font-family: 'Kanit', sans-serif;
+    color: #FFF;
+    text-transform: uppercase;
+    float: left;
+}
+
 
 /* Nav styles */
 
 nav {
     float: right;
+}
+
+.nav-container {
+    padding-top: 30px;
 }
 
 label, input[type="checkbox"] {
@@ -161,7 +194,6 @@ aside i {
     background-color: #CC1D36;
     border-radius: 10px;
     padding-top: 10px;
-    /* padding: 10px; */
 }
 
 /* Section one styles */
@@ -237,7 +269,7 @@ aside i {
 }
 
 .container h3 {
-    max-width: 65%;
+    max-width: 420px;
 }
 
 .container p {
@@ -282,21 +314,27 @@ aside i {
 }
 
 .icons i {
-    color: #CC1D36;
     font-size: 7.0rem;
 }
-.icons div {
+
+
+.icons a {
     width: calc(100% / 3 - 20px);
     margin: 10px;
     float: left;
+    color: #CC1D36;
 }
 
-.icons div:nth-child(3) {
+.icons a:hover {
+    color: #FFF;
+}
+
+.icons a:nth-child(3) {
     margin-right: 0;
 }
 
+
 .icons p {
-    /* width: 100%; */
     font-size: 3.1rem;
     font-family: 'Kanit', sans-serif;
     color: #FFF;
@@ -342,13 +380,25 @@ input[type="email"] {
     padding-left: 30px;
 }
 
+input[type="email"]:focus {
+    background-color: rgba(255, 255, 255, 0.8);
+}
+
 footer button {
-    background-color: black;
+    background-color: #000;
     color: #FFF;
     padding: 0;
     width: 150px;
     height: 50px;
     border: none;
+}
+
+footer button:hover {
+    color: #CC1D36;
+}
+
+footer button:focus {
+    border: 1px solid white;
 }
 
 .footer-container {
@@ -393,15 +443,41 @@ footer button {
     clear: both;
 }
 
+/* Start of media styles */
 
-/* Media styles for tablets */
+/* Media styles for section three & four padding/header for different resolutions */
 
-@media (max-width: 1150px) {
+@media (max-width: 1440px) {
 
-    .wrapper h1 {
-        padding-top: 600px;
+    .container .wrapper {
+        padding-top: 10%;
     }
 }
+
+@media (max-width: 1366px) {
+
+    .container .wrapper {
+        padding-top: 5%;
+    }
+}
+
+@media (max-width: 1242px) {
+
+    .container h3 {
+        width: 90%;
+    }
+
+    h3 {
+        font-size: 3vw;
+        line-height: 2.5vw;
+    }
+
+    p {
+        font-size: 1.5vw;
+        line-height: 1.8vw;
+    }
+}
+
 
 /* Media styles for tablets & mobile */
 
@@ -411,10 +487,19 @@ footer button {
         width: 90%;
     }
 
-    .wrapper h1 {
-        padding-top: 600px;
+    .crop {
+        overflow: hidden;
+        width: 100%;
     }
 
+    .crop img {
+        margin: -15% 0 -5% 0;
+    }
+
+    p {
+        font-size: 2.0rem;
+        line-height: 29px;
+    }
 
     h1 {
         font-size: 12vw;
@@ -436,10 +521,6 @@ footer button {
 
     .logo {
         display: none;
-    }
-
-    .wrapper h1, h2 {
-        top: 700px;
     }
 
     aside {
@@ -547,7 +628,7 @@ footer button {
     }
 
     .highlight-article h3 {
-        margin: 30px 0;
+        margin: 80px 0 30px 0;
     }
     
     .highlight-article p {
@@ -569,6 +650,10 @@ footer button {
         padding-top: 80px;
     }
 
+    .model-container .crop img {
+        margin: -13% 0 -9.5% 0;
+    }
+
     .container .wrapper {
         padding: 0;
     }
@@ -577,7 +662,9 @@ footer button {
         max-width: none;
         width: 80%;
         margin: 0 auto;
-        padding-top: 30px;
+        padding-top: 80px;
+
+        line-height: 3.0rem;
     }
 
     .container p, .container h3 {
@@ -598,6 +685,10 @@ footer button {
         margin-top: 80px;
     }
 
+    .drive-img .crop img {
+        margin: -20% 0 -12% 0;
+    }
+
     /* Section five styles */
 
     .icons {
@@ -607,6 +698,7 @@ footer button {
 
     .icons i {
         font-size: 50px;
+        margin-right: 15px;
     }
 
     .icons p {
@@ -618,7 +710,7 @@ footer button {
         display: block;
     }
 
-    .icons div {
+    .icons a {
         float: none;
         width: 100%;
         margin-left: 0;
@@ -683,10 +775,6 @@ footer button {
         padding-top: 700px;
     }
 
-    h2 {
-        /* font-size: 1.55rem; */
-    }
-
     h3 {
         font-size: 3.5rem;
     }
@@ -698,6 +786,10 @@ footer button {
 
     .wrapper h1 {
         padding-top: 70vh;
+    }
+
+    h3 {
+        line-height: 3.0rem;
     }
 }
 

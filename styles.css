@@ -9,6 +9,8 @@
 /* Some notes to understand the reason for different measurements, etc:
     1. Used viewport to help compromise the header text from going over the header image
     2. Used padding for wrapper for section four & five paragraph for different resolutions and to prevent it from pushing pass the image
+    3. Some font sizes are using viewport for it to downsize gradually
+    4. Changed some letter-spacing and line-height to match best to the original design
 */
 
 
@@ -74,7 +76,7 @@ h1, h3, h4, button, .footer-nav {
 h1 {
     font-size: 11.62rem;
     color: #CC1D36;
-    letter-spacing: 1px;
+    letter-spacing: 3px;
     line-height: 97px;
 
     width: 500px;
@@ -119,6 +121,9 @@ header .wrapper {
     bottom: 0;
 }
 
+
+/* Nav styles */
+
 .logo {
     font-size: 3.0rem;
     font-family: 'Kanit', sans-serif;
@@ -126,9 +131,6 @@ header .wrapper {
     text-transform: uppercase;
     float: left;
 }
-
-
-/* Nav styles */
 
 nav {
     float: right;
@@ -148,6 +150,7 @@ label, input[type="checkbox"] {
     text-transform: uppercase;
     list-style: none;
     font-family: 'Catamaran', sans-serif;
+    line-height: 29px;
     padding: 0 20px 20px;
 }
 
@@ -333,7 +336,6 @@ aside i {
     margin-right: 0;
 }
 
-
 .icons p {
     font-size: 3.1rem;
     font-family: 'Kanit', sans-serif;
@@ -369,7 +371,6 @@ footer p {
 .subscribe {
     width: 50%;
 }
-
 
 input[type="email"] {
     -moz-appearance: none;
@@ -436,11 +437,12 @@ footer button:focus {
 }
 
 .copyright {
+    clear: both;
     background-color: #0B0101;
     color: #FFF;
+    font-family: 'Roboto', sans-serif;
     text-align: center;
     padding: 8px;
-    clear: both;
 }
 
 /* Start of media styles */
